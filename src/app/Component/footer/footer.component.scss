@@ -1,0 +1,30 @@
+.footer {
+  background-color: var(--light-color);
+  padding: 35px 0;
+  margin-top: 40px;
+}
+
+.footer-container {
+  width: 75%;
+  margin: auto;
+}
+
+.footer h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.footer p {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.footer hr {
+  border-color: #999;
+}
+
+.copy-right {
+  text-align: center;
+  font-size: 16px !important;
+  margin-top: 20px;
+}

@@ -55,7 +55,8 @@ a:hover {
 
 .product .btn-main {
   transform: translateY(150%);
-  transition: transform 1s;
+ transition: transform 1s;
+  cursor: pointer;
 }
 
 .product:hover .btn-main {
@@ -97,8 +98,12 @@ a:hover {
 .btn-main:hover {
   background-color: #11bd11;
 }
-.nav-item{
-  color: var(--main-color);
+.navbar-auth {
+  background-color: var(--main-color);
+  color: var(--light-color);
+  padding: 10px;
 }
-
-// اعمل الكلاس عشان ياخد اللوان زي سطر رقم 100 احاول انديها صح من فوق عشان لو حبيت اغير لون الموقع كله اقدر اعملها من مكان واحد
+.register-section{
+  background-color: var(--light-color);
+  border-radius: 5px;
+}
