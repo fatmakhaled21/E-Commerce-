@@ -47,15 +47,19 @@ export class RegisterComponent {
     ]),
   }, { validators: [this.confirmPassword] } as FormControlOptions);
 
-  confirmPassword(group: FormGroup):void{
-    let password = group.get('password')?.value;
-    let rePassword = group.get('rePassword')?.value;
-    if(rePassword?.value == '') {
-      rePassword.setErrors({required: true});
-    }else if(password.value == rePassword.value){
-      rePassword.setErrors({mismatch: true});
-    }
+  confirmPassword(group: FormGroup) {
+
+  const password = group.get('password');
+  const rePassword = group.get('rePassword');
+
+  if (password?.value === rePassword?.value) {
+    rePassword?.setErrors(null);
+  } else {
+    rePassword?.setErrors({ mismatch: true });
   }
+
+  return null;
+}
 
   handleForm(): void {
     //console.log(this.registerForm.value);

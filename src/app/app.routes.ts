@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { authGuard } from './Guatd/auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { RegisterComponent } from './Component/register/register.component';
+import { LoginComponent } from './Component/login/login.component';
 
 export const routes: Routes = [
   {
@@ -50,20 +52,10 @@ export const routes: Routes = [
     path: '',
     component: AuthLayoutComponent,
     children: [
-      {
-        path: 'login',
-        loadComponent: () =>
-          import('./Component/login/login.component').then(
-            (c) => c.LoginComponent,
-          ),
-      },
-      {
-        path: 'register',
-        loadComponent: () =>
-          import('./Component/register/register.component').then(
-            (c) => c.RegisterComponent,
-          ),
-      },
+      //{path: '', redirectTo: 'login', pathMatch: 'full'},
+      {path:'register', component: RegisterComponent},
+      {path:'login', component: LoginComponent},
+
     ],
   },
   {
